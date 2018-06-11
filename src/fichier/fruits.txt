@@ -1,5 +1,6 @@
+De quelle couleur est le fruit,?
 pamplemousse,jaune
-citron,jaune ou vert
+citron,jaune
 pêche, orange
 ananas,jaune
 fraise,rouge
@@ -14,4 +15,4 @@ kiwi,vert
 mandarine
 papaye,orange
 raisin,violet
-mangue,jaune ou rouge
+mangue,jaune
