@@ -13,7 +13,7 @@ Arménie,Erevan
 Australie,Canberra
 Autriche,Vienne
 Azerbaïdjan,Bakou
-Bahamas,Nassa,
+Bahamas,Nassa
 Bahreïn,Manama
 Bangladesh,Dacca
 Barbade,Bridgetown

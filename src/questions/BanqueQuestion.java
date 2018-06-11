@@ -44,10 +44,15 @@ public class BanqueQuestion {
     public void setQuestions() {
         LecteurFichier lecteurFichier = new LecteurFichier();
         ArrayList<String[]> aQ = lecteurFichier.lir(nomFichier);
-        for (int i = 1; i <= nbQuestions; i++) {
+        ArrayList<String[]> qR = lecteurFichier.lir(NOMFICHIERQF);
+        System.out.println(aQ.size() + ", " + qR.size());
+        int index = nbQuestions;
+        for (int i = index; i >= 1; i--) {
             int n = (int) (Math.random() * 2);
+//            Questions r = questions.get(nbQuestions - index);
+//            System.out.println(questions.size() + ", " + r.getQuestion() + ", " + r.getReponse());
             if (n == 0) {
-                this.questions.add(creeQuestionReponse(lecteurFichier.lir(NOMFICHIERQF)));
+                this.questions.add(creeQuestionReponse(qR));
             } else {
                 this.questions.add(creeQuestionChoixMultiple(aQ));
             }
@@ -56,7 +61,7 @@ public class BanqueQuestion {
 
     public Questions creeQuestionReponse(ArrayList<String[]> reponsesArray) {
         Questions q = new Questions();
-        int n = (int) (Math.random() * reponsesArray.size() + 1);
+        int n = nbRaoud(reponsesArray.size() - 1);
         String[] r = reponsesArray.get(n);
         q.setQuestion(r[0]);
         q.setReponse(r[1]);
@@ -66,34 +71,32 @@ public class BanqueQuestion {
 
     public Questions creeQuestionChoixMultiple(ArrayList<String[]> reponsesArray) {
         ArrayList<String[]> ra = reponsesArray;
-        int index = nbRaoud();
+        int index = nbRaoud(reponsesArray.size());
         Questions q = new Questions();
         ra.remove(0);
         String[] question = reponsesArray.get(0);
-        String[] reponse = reponsesArray.get(index);
+        String[] response = ra.get(index);
         q.setReponsesArray(ra, index);
-        q.setQuestion(question[0] + " " + reponse[1] + " ? " + "Options : [ " + q.getReponseArry(0) + ", " + q.getReponseArry(1) + ", " + q.getReponseArry(2) + ", " + q.getReponseArry(3) + " ]");
-        q.setReponse(reponse[1]);
+        q.setQuestion(question[0] + " " + response[0] + " ? " + "Options : [ " +
+                q.getReponseArry(0) + ", " +
+                q.getReponseArry(1) + ", " +
+                q.getReponseArry(2) + ", " +
+                q.getReponseArry(3) + " ]");
+        q.setReponse(response[1]);
         if (questionsEgale(q)) creeQuestionChoixMultiple(reponsesArray);
         return q;
     }
 
     public Questions prochaineQuestion() {
-        int a = nbRaoud();
+        int a = nbRaoud(nbQuestions);
+        questionDonne.add(a);
         return questions.get(a);
-
     }
 
-    public boolean validerReponse(String reponse) {
-
-
-        return false;
-    }
-
-    private int nbRaoud() {
+    private int nbRaoud(int n) {
         Random r = new Random();
-        int n = r.nextInt(nbQuestions + 1);
-        return n;
+        int a = r.nextInt(n);
+        return a;
     }
 
     private boolean questionsEgale(Questions q) {
@@ -104,6 +107,7 @@ public class BanqueQuestion {
                 return true;
             }
         }
+
         return false;
     }
 

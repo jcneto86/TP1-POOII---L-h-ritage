@@ -2,6 +2,7 @@ package questions;
 
 import java.util.ArrayList;
 import java.util.Random;
+
 public class QuestionsChoixMultiple {
 
     private String[] reponsesArray = new String[4];
@@ -11,6 +12,12 @@ public class QuestionsChoixMultiple {
     }
 
     public void setReponsesArray(ArrayList<String[]> r, int index) {
+        String[] response = r.get(index);
+        this.reponsesArray[0] = response[1];
+        for (int i = 1; i < 4; i++) {
+            this.reponsesArray[i] = reponseOfIndex(r);
+        }
+        this.reponsesArray = shuffleArray(this.reponsesArray);
     }
 
     public String[] shuffleArray(String[] ar) {
@@ -22,5 +29,17 @@ public class QuestionsChoixMultiple {
             ar[i] = a;
         }
         return ar;
+    }
+    private int nbRaoud(int n) {
+        Random r = new Random();
+        int a = r.nextInt(n + 1);
+        return a;
+    }
+    private String reponseOfIndex(ArrayList<String[]> rQ) {
+        int index = nbRaoud(rQ.size());
+        String[] a = rQ.get(index);
+        if (java.util.Arrays.asList(reponsesArray).contains(a[1]))
+            reponseOfIndex(rQ);
+        return a[1];
     }
 }

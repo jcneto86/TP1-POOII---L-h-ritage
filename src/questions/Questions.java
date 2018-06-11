@@ -18,7 +18,7 @@ public class Questions extends QuestionsChoixMultiple {
     }
 
     public void setQuestion(String question) {
-        this.question = question + " ?";
+        this.question = question;
     }
 
     public String getReponse() {
@@ -29,7 +29,7 @@ public class Questions extends QuestionsChoixMultiple {
         this.reponse = reponse;
     }
 
-    public boolean valider(String essai) {
+    public boolean validerReponse(String essai) {
         if (essai.equals(this.reponse))
             return true;
         else

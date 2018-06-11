@@ -11,7 +11,7 @@ public class LecteurFichier {
     public LecteurFichier() {
     }
     public ArrayList<String[]> lir(String nomFichier) {
-        ArrayList<String[]> questions = new ArrayList<>();
+        ArrayList<String[]> ArrayQuestions = new ArrayList<>();
         File file = new File(nomFichier);
         Scanner scanner = null;
         try
@@ -21,7 +21,7 @@ public class LecteurFichier {
             {
                 String l = scanner.nextLine();
                 String[] array = l.split(",");
-                questions.add(array);
+                ArrayQuestions.add(array);
             }
         }
         catch (FileNotFoundException e)
@@ -33,7 +33,7 @@ public class LecteurFichier {
             if (scanner != null)
                 scanner.close();
         }
-        return questions;
+        return ArrayQuestions;
     }
 
 }

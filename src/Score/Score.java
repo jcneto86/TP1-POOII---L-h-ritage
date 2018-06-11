@@ -52,16 +52,16 @@ public class Score {
         return reponceCorrect;
     }
 
-    public void setReponceCorrect(int reponceCorrect) {
-        this.reponceCorrect = reponceCorrect;
+    public void setReponceCorrect() {
+        this.reponceCorrect = this.reponceCorrect+1;
     }
 
     public int getReponceIncorrect() {
         return reponceIncorrect;
     }
 
-    public void setReponceIncorrect(int reponceIncorrect) {
-        this.reponceIncorrect = reponceIncorrect;
+    public void setReponceIncorrect() {
+        this.reponceIncorrect = this.reponceIncorrect+1;
     }
 
     @Override
