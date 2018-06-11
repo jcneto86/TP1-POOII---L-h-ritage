@@ -1,0 +1,14 @@
+Quelle est la capitale de la province,?
+Colombie-Britannique,Victoria
+Alberta,Edmonton
+Saskatchewan,Regina
+Manitoba,Winnipeg
+Ontario,Toronto
+Québec,Québec
+Terre-Neuve-et-Labrador,Saint-Jean de Terre Neuve
+Nouveau-Brunswick,Fredericton
+Nouvelle-Écosse,Halifax
+Île-du-Prince-Édouard,Charlottetown
+Nunavut,Iqaluit
+Territoires du Nord-Ouest,Yellowknife
+Yukon,Whitehorse
