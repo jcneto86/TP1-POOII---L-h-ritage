@@ -12,8 +12,8 @@ public class QuestionsChoixMultiple {
     }
 
     public void setReponsesArray(ArrayList<String[]> r, int index) {
-        String[] response = r.get(index);
-        this.reponsesArray[0] = response[1];
+        String[] reponse = r.get(index);
+        this.reponsesArray[0] = reponse[1];
         for (int i = 1; i < 4; i++) {
             this.reponsesArray[i] = reponseOfIndex(r);
         }
@@ -21,9 +21,8 @@ public class QuestionsChoixMultiple {
     }
 
     public String[] shuffleArray(String[] ar) {
-        Random rnd = new Random();
         for (int i = ar.length - 1; i > 0; i--) {
-            int index = rnd.nextInt(i + 1);
+            int index = nbRaoud(i);
             String a = ar[index];
             ar[index] = ar[i];
             ar[i] = a;

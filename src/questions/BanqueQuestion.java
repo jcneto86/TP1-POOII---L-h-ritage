@@ -77,7 +77,8 @@ public class BanqueQuestion {
         String[] question = reponsesArray.get(0);
         String[] response = ra.get(index);
         q.setReponsesArray(ra, index);
-        q.setQuestion(question[0] + " " + response[0] + " ? " + "Options : [ " +
+        q.setQuestion(question[0] + " " +
+                response[0] + " ? " + "Options : [ " +
                 q.getReponseArry(0) + ", " +
                 q.getReponseArry(1) + ", " +
                 q.getReponseArry(2) + ", " +
