@@ -1,0 +1,17 @@
+pamplemousse,jaune
+citron,jaune ou vert
+pêche, orange
+ananas,jaune
+fraise,rouge
+pomme,rouge
+pruneau,violet
+orange,orange
+poire,jaune
+framboise,rouge
+avocat,vert
+cerise,rouge
+kiwi,vert
+mandarine
+papaye,orange
+raisin,violet
+mangue,jaune ou rouge
