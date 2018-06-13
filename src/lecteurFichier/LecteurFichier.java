@@ -10,6 +10,15 @@ public class LecteurFichier {
 
     public LecteurFichier() {
     }
+
+    /** public ArrayList<String[]> lir(String nomFichier)
+     *
+     * Function qui lir un fichier txt et le retour est un ArrayListe de tableau de String.
+     *
+     * example d'appler : lir(nomFichier) ou lir("/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/fruits.txt");
+     * @param nomFichier Lien String
+     * @return ArrayListe de tableau de String
+     */
     public ArrayList<String[]> lir(String nomFichier) {
         ArrayList<String[]> ArrayQuestions = new ArrayList<>();
         File file = new File(nomFichier);

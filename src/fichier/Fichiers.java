@@ -1,11 +1,12 @@
 package fichier;
 
 public class Fichiers {
-    private final String BRASIL = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/brasil.txt";
-    private final String CANADA = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/canada.txt";
-    private final String PAYS = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/pays.txt";
-    private final String USA = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/USA.txt";
-    private final String FRUITS = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/fruits.txt";
+    private final String LIEN = "/Users/jcneto/IdeaProjects/TP1 POOII - L'héritage/src/fichier/";
+    private final String BRASIL = LIEN+"brasil.txt";
+    private final String CANADA = LIEN+"canada.txt";
+    private final String PAYS = LIEN+"pays.txt";
+    private final String USA = LIEN+"USA.txt";
+    private final String FRUITS = LIEN+"fruits.txt";
 
     public String getBRASIL() {
         return BRASIL;

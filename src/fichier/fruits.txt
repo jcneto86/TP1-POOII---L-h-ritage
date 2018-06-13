@@ -1,7 +1,7 @@
 De quelle couleur est le fruit,?
 pamplemousse,jaune
 citron,jaune
-pêche, orange
+pêche,orange
 ananas,jaune
 fraise,rouge
 pomme,rouge
@@ -12,7 +12,7 @@ framboise,rouge
 avocat,vert
 cerise,rouge
 kiwi,vert
-mandarine
+mandarine,orange
 papaye,orange
 raisin,violet
 mangue,jaune
